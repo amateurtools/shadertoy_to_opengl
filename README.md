@@ -1,8 +1,4 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
-# give this back to me in beautiful markup code, but don't mark it up, give it in plain text that will tell the markup program to make it pretty.
-
-Shadertoy to JUCE Shader Converter
+#Shadertoy to OpenGL Shader Converter
 (this is brand new as of today, so there's still problems that should be fixed soon)
 
 Purpose:
