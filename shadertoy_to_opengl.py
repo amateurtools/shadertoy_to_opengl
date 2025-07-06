@@ -5,7 +5,7 @@ import re
 def convert_shadertoy_to_juce(shader_code):
     # Match mainImage with any indentation for the closing brace
     mainimage_regex = re.compile(
-        r'void\s+mainImage\s*\(\s*out\s+vec4\s+(\w+)\s*,\s*in\s*vec2\s+(\w+)\s*\)\s*\{([\s\S]*?)\n\}', 
+        r'void\s+mainImage\s*\(\s*out\s+vec4\s+(\w+)\s*,\s*in\s*vec2\s+(\w+)\s*\)\s*\{([\s\S]*?)\n[ \t]*\}', 
         re.MULTILINE
     )
     match = mainimage_regex.search(shader_code)
@@ -42,6 +42,7 @@ def convert_shadertoy_to_juce(shader_code):
 
     # Prepend uniforms, append helper functions and main()
     return prepend_uniforms(code_wo_mainimage + '\n\n' + main_func)
+
 
 def prepend_uniforms(shader_code):
     # Only add uniforms that are referenced in the code
