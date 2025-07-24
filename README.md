@@ -1,5 +1,5 @@
 #Shadertoy to OpenGL Shader Converter
-(this is brand new as of today, so there's still problems that should be fixed soon)
+(this will probably get you most of the way there, but an LLM could do better.)
 
 Purpose:
 
